@@ -30,7 +30,7 @@ def handle_disconnect():
         emit('user_left', {'username': user['username']}, broadcast = True)
 
 @socketio.on('send_message')
-def handle_sand_message(data):
+def handle_send_message(data):
     user = users.get(request.sid)
     if user:
         emit('new_message', {

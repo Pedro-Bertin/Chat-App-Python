@@ -198,7 +198,7 @@
             addMessage(data.message, 'user', data.username, data.avatar)
         })
 
-        socket.on('username_updated', (data) => {
+        socket.on('username_update', (data) => {
             addMessage(`${data.old_username} mudou seu nome para: ${data.new_username}`, 'system')
 
             if(data.old_username === currentUsername) {
